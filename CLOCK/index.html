@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relógio com Alarme</title>
+  <link rel="stylesheet" href="stily.css" type="text/css" media="all" />
+  <script defer src="script.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+  <div class="clock" id="clock">
+    <div class="hand hour" id="hour"></div>
+    <div class="hand minute" id="minute"></div>
+    <div class="hand second" id="second"></div>
+  </div>
+
+  <div class="alarm-section">
+    <input type="time" id="alarmTime">
+    <button class="set-btn" onclick="addAlarm()">Definir Alarme</button>
+    <button id="stopAlarmBtn" class="stop-btn" onclick="stopAlarm()">Parar Alarme</button>
+    <p id="status"></p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Horário</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="alarmTableBody"></tbody>
+  </table>
+
+  <audio id="alarmSound" src="som.mp3" preload="auto" loop></audio>
+
+</body>
+</html>
